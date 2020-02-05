@@ -22,7 +22,7 @@ class CreateReviewsTable extends Migration
             $table->text('description')->nullable();
             $table->string('logo_path', 500)->nullable();
             $table->string('thumb_path', 500)->nullable();
-            $table->integer('rating')->nullable();
+            $table->string('rating', 10)->nullable();
             $table->string('ref_link');
             $table->text('pros')->nullable();
             $table->text('cons')->nullable();

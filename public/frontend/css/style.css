@@ -4487,6 +4487,26 @@ padding-top: 10px;
   color: #ff9800;
 }
 
+.check-list li:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  color: #2fd388;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.icon-red.check-list li:before {
+  content: "\f00d";
+  color: #ff4a4a;
+}
+.icon-orange.check-list li:before {
+  content: "\f005";
+  color: #ff9800;
+}
+
 .leave-opinion {
   margin-bottom: 30px;
 }

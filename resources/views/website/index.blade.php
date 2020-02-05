@@ -110,13 +110,14 @@
                 <div class="col-12 col-md-12 col-lg-12 product-grid">
                     <div class="row">
 
+                        @foreach($reviews as $key => $review)
                         <div class="col-12 col-sm-12 col-lg-12 reviews-load-more-full_grid">
                             <figure class="figure product-box row">
                                 <figcaption></figcaption>
                                 <div class="col-12 col-md-5 col-lg-4 col-xl-4 p0">
                                     <div class="product-box-img">
-                                        <a href="product-details.html">
-                                            <img src="{{ asset('frontend/img/shop-img/shop-img-1.jpg') }}" class="figure-img img-fluid mx-auto d-block" alt="Product Img">
+                                        <a href="{{ $review->ref_link }}" target="_blank">
+                                            <img src="{{ asset('uploads/review/'.$review->thumb_path) }}" class="figure-img img-fluid mx-auto d-block" alt="Product Img">
                                         </a>
                                     </div>
                                 </div>
@@ -124,33 +125,73 @@
                                     <div class="figure-caption text-left">
                                         <div class="row">
                                             <div class="col-12 col-md-4 col-lg-4 col-xl-4 pr-0">
-                                                <a href="#" class="price-start">
-                                                    <strong class="active-color"><h3>1. Hostinger</h3></strong>
+                                                <a href="{{ $review->ref_link }}" target="_blank" class="price-start">
+                                                    <strong class="active-color"><h3>{{ $key+1 }}. {{ $review->title }}</h3></strong>
                                                 </a>
                                             </div>
                                             <div class="col-12 col-md-4 col-lg-4 col-xl-4">
                                                 <div class="rating">
+                                                    @if($review->rating >= 1)
                                                     <i class="fa fa-star active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 2)
                                                     <i class="fa fa-star active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 3)
                                                     <i class="fa fa-star active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 4)
+                                                    <i class="fa fa-star active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 5)
+                                                    <i class="fa fa-star active-color" aria-hidden="true"></i>
+                                                    @endif
+
+                                                    @if($review->rating >= 0.1 && $review->rating <= 0.9)
+                                                    <i class="fa fa-star-half-o active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 1.1 && $review->rating <= 1.9)
+                                                    <i class="fa fa-star-half-o active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 2.1 && $review->rating <= 2.9)
+                                                    <i class="fa fa-star-half-o active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 3.1 && $review->rating <= 3.9)
+                                                    <i class="fa fa-star-half-o active-color" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating >= 4.1 && $review->rating <= 4.9)
+                                                    <i class="fa fa-star-half-o active-color" aria-hidden="true"></i>
+                                                    @endif
+
+                                                    @if($review->rating <= 0)
                                                     <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating <= 1)
                                                     <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating <= 2)
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating <= 3)
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    @endif
+                                                    @if($review->rating <= 4)
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-4 col-lg-4 col-xl-4">
                                                 <div class="compare-btn">
-                                                    <a class="btn btn-primary btn-sm" href="#"><i class="fa fa-rocket" aria-hidden="true"></i> Explore Features</a>
+                                                    <a class="btn btn-primary btn-sm" href="{{ $review->ref_link }}" target="_blank"><i class="fa fa-rocket" aria-hidden="true"></i> Explore Features</a>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-12 col-lg-12">
                                                 <div class="content-excerpt">
-                                                    <p class="product-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni</p>
-
-                                                    <p class="product-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni</p>
+                                                    <p class="product-content">{!! $review->short_desc !!}</p>
 
                                                     <div class="raed-more">
-                                                        <a class="btn btn-link" href="single-blog-with.html">
-                                                            READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                        <a class="btn btn-link" href="{{ $review->ref_link }}">
+                                                            Read Full Review <i class="fa fa-angle-right" aria-hidden="true"></i>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -172,10 +213,7 @@
                                                   </div>
                                                 </div>
                                                 <ul class="check-list icon-orange">
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i> All</li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i> Design</li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i> Developing</li>
-                                                    <li><i class="fa fa-star" aria-hidden="true"></i> Metalic</li>
+                                                    {!! $review->key_features !!}
                                                 </ul>
                                             </div>
                                         </div>
@@ -190,10 +228,7 @@
                                                   </div>
                                                 </div>
                                                 <ul class="check-list">
-                                                    <li><i class="fa fa-check" aria-hidden="true"></i> All</li>
-                                                    <li><i class="fa fa-check" aria-hidden="true"></i> Design</li>
-                                                    <li><i class="fa fa-check" aria-hidden="true"></i> Developing</li>
-                                                    <li><i class="fa fa-check" aria-hidden="true"></i> Metalic</li>
+                                                    {!! $review->pros !!}
                                                 </ul>
                                             </div>
                                         </div>
@@ -208,10 +243,7 @@
                                                   </div>
                                                 </div>
                                                 <ul class="check-list icon-red">
-                                                    <li><i class="fa fa-close" aria-hidden="true"></i> All</li>
-                                                    <li><i class="fa fa-close" aria-hidden="true"></i> Design</li>
-                                                    <li><i class="fa fa-close" aria-hidden="true"></i> Developing</li>
-                                                    <li><i class="fa fa-close" aria-hidden="true"></i> Metalic</li>
+                                                    {!! $review->cons !!}
                                                 </ul>
                                             </div>
                                         </div>
@@ -219,6 +251,8 @@
                                 </div>
                             </figure>
                         </div>
+                        @endforeach
+
                         {{-- <div class="col-12 col-sm-6 col-lg-12 reviews-load-more-full_grid">
                             <figure class="figure product-box row">
                                 <figcaption></figcaption>

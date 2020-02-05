@@ -31,10 +31,9 @@ class HomeController extends Controller
     public function review($slug)
     {
         // Reviews
-        /*$review = Review::where('slug', $slug)
-                    ->firstOrFail();*/
-
-        return view('website.review');
+        $review = Review::where('slug', $slug)
+                    ->firstOrFail();
+                    
         return view('website.review', compact('review'));
     }
 
