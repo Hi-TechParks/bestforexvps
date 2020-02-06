@@ -12,9 +12,6 @@
 */
 
 // Home Route
-/*Route::get('/', function(){
-    return view('website.index');
-});*/
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('/review/{slug}', 'HomeController@review')->name('review');
 Route::get('/article/{slug}', 'HomeController@article')->name('article');
@@ -25,26 +22,14 @@ Route::get('/articles', 'ArticlesController@index');
 Route::get('/article/category/{id}', 'ArticlesController@category');
 Route::get('/article/{id}', 'ArticlesController@show');
 
-// Video Routes
-Route::get('/videos', 'VidoesController@index');
-Route::get('/video/{id}', 'VidoesController@show');
-
-// Faq Routes
-Route::get('/faqs', 'FaqsController@index');
-Route::get('/faq/category/{id}', 'FaqsController@category');
-Route::get('/faq/{id}', 'FaqsController@show');
-
-// Search Route
-Route::get('/search', 'SearchController@index');
-
 // Contact Route
 Route::get('/contact', 'ContactController@index');
 Route::post('/contact', 'ContactController@sendMail');
 
 
 // Auth Routes
-Auth::routes();
-// Auth::routes(['register' => false]);
+// Auth::routes();
+Auth::routes(['register' => false]);
 
 // Admin Routes
 Route::group(['prefix' => 'admin',  'middleware' => 'auth', 'namespace' => 'Admin'], function()
@@ -54,9 +39,6 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth', 'namespace' => 'Admi
     Route::get('dashboard', 'DashboardController@index')->name('dashboard.index');
 
     // Admin Routes
-	Route::resource('faq-category', 'FaqCategoryController');
-	Route::resource('faq', 'FaqController');
-    Route::resource('video', 'VideoController');
     Route::resource('article-category', 'ArticleCategoryController');
     Route::resource('article', 'ArticleController');
     Route::resource('review', 'ReviewController');
