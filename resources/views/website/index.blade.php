@@ -9,97 +9,19 @@
     	<div id="main-slider" class="slider-bg1 owl-carousel owl-theme product-review">
 			<div class="item slider-bg d-flex align-items-center">
 				
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="slider-text fadeInUp animated order-2 order-sm-1  col-sm-6 col-md-7">
-                        <h1 class="slider-title">Get Review <span class="strong">– Lets Compare</span></h1>
-                        <p class="slider-content">Comparison Your Product with Best Review from Multi-Vendor Store .<br>
-                        Hurry to go affiliate on this day successfully with BLURB Theme.</p>
-                        <a href="shop-left-sidebar.html" class="btn btn-primary wd-shop-btn slider-btn">
-                            Go to store <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-md-5 order-1 order-sm-2 slider-img fadeInDown animated">
-                        <img src="{{ asset('frontend/img/slider-img/slider1.png') }}" alt="">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="slider-text fadeInUp animated order-2 order-sm-1  col-sm-6 col-md-7">
+                            <h1 class="slider-title">Find the Most Appropriate Solution & Pick Your <span class="strong">Best One</span>.</h1>
+                            <p class="slider-content">Let Us Do All the Research, Analysis , Categorization & Reviewal.</p>
+                        </div>
+                        <div class="col-sm-6 col-md-5 order-1 order-sm-2 slider-img fadeInDown animated">
+                            <img src="{{ asset('frontend/img/forex_trading.png') }}" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
 			</div>
            
-            <div class="item slider-bg d-flex align-items-center">
-				
-				<div class="container">
-					<div class="row no-gutters">
-						<div class="slider-text fadeInUp animated order-2 order-sm-1 col-sm-6  col-md-7">
-							<h1 class="slider-title">Get Review <span class="strong">– Lets Compare</span></h1>
-							<p class="slider-content">Comparison Your Product with Best Review from Multi-Vendor Store . <br>
-							Hurry to go affiliate on this day successfully with BLURB Theme.</p>
-							<a href="shop-left-sidebar.html" class="btn btn-primary wd-shop-btn slider-btn">
-								Go to store <i class="fa fa-arrow-right" aria-hidden="true"></i>
-							</a>
-						</div>
-						<div class="col-sm-6 col-md-5 order-1 order-sm-2 slider-img-two fadeInDown animated">
-						    <img src="{{ asset('frontend/img/slider-img/slider2.png') }}" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-    	</div>
-    </section>
-
-    <!-- =========================
-        Service  Section
-    ============================== -->
-    <section class="wd-service">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-6 col-md-6 col-lg-3">
-    				<div class="service-box social wow fadeIn animated" data-wow-delay="0.2s">
-    					<img src="{{ asset('frontend/img/service/social.png') }}" alt="social">
-    					<div class="box-text d-flex align-items-center">
-    						<h5>Social Business</h5>
-    					</div>
-    					<div class="hover-img">
-    						<img src="{{ asset('frontend/img/service/social-bg.png') }}" alt="social">
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-6 col-md-6 col-lg-3">
-    				<div class="service-box price wow fadeIn animated" data-wow-delay="0.4s">
-    					<img src="{{ asset('frontend/img/service/price.png') }}" alt="price">
-    					<div class="box-text d-flex align-items-center">
-    						<h5>Price Comparison</h5>
-	    				</div>
-    					<div class="hover-img">
-    						<img src="{{ asset('frontend/img/service/price-bg.png') }}" alt="social">
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-6 col-md-6 col-lg-3">
-    				<div class="service-box multivendor wow fadeIn animated" data-wow-delay="0.6s">
-    					<img src="{{ asset('frontend/img/service/multivendor.png') }}" alt="multivendor">
-    					<div class="box-text d-flex align-items-center">
-    						<h5>Multivendor store</h5>
-	    				</div>
-    					<div class="hover-img">
-    						<img src="{{ asset('frontend/img/service/multivendor-bg.png') }}" alt="social">
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-6 col-md-6 col-lg-3">
-    				<div class="service-box product wow fadeIn animated" data-wow-delay="0.8s">
-    					<img src="{{ asset('frontend/img/service/product.png') }}" alt="product">
-    					<div class="box-text d-flex align-items-center">
-    						<h5>Product Review</h5>
-    					</div>
-    					<div class="hover-img">
-    						<img src="{{ asset('frontend/img/service/product-bg.png') }}" alt="social">
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-
-
     	</div>
     </section>
 

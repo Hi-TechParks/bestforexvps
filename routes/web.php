@@ -13,7 +13,7 @@
 
 // Home Route
 Route::get('/', 'HomeController@index')->name('index');
-Route::get('/review/{slug}', 'HomeController@review')->name('review');
+/*Route::get('/review/{slug}', 'HomeController@review')->name('review');
 Route::get('/article/{slug}', 'HomeController@article')->name('article');
 Route::get('/comparison', 'HomeController@comparison')->name('comparison');
 
@@ -24,7 +24,7 @@ Route::get('/article/{id}', 'ArticlesController@show');
 
 // Contact Route
 Route::get('/contact', 'ContactController@index');
-Route::post('/contact', 'ContactController@sendMail');
+Route::post('/contact', 'ContactController@sendMail');*/
 
 
 // Auth Routes

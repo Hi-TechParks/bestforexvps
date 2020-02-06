@@ -16,6 +16,22 @@
     <meta name="keywords" content="{{ $setting->keywords }}">
     @endforeach
 
+    <!-- Meta Tags -->
+    <link rel="canonical" href="https://bestforexvps.org/"/>
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="@sproutsocial" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:creator" content="@sproutsocial" />
+    <!-- Meta Tags -->
+
     @if(empty($setting))
     <!-- App Title -->
     <title>@yield('title')</title>
@@ -57,40 +73,6 @@
     <section id="wd-header" class="d-flex align-items-center mob-sticky">
       <div class="container">
         <div class="row">
-        <!-- =========================
-          Mobile Menu 
-        ============================== -->
-            <div class="order-2 order-sm-1 col-2 col-sm-2 col-md-4 d-block d-lg-none">
-              <div class="accordion-wrapper hide-sm-up">
-                  <a href="#" class="mobile-open"><i class="fa fa-bars" ></i></a>
-                  <!--Mobile Menu start-->
-
-                  <ul id="mobilemenu" class="accordion">
-                     <!-- <li class="mob-logo"><a href="index.html"><img src="{{ asset('frontend/img/logo.png') }}" alt=""></a></li>-->
-                      <li><a class="closeme" href="#"><i class="fa fa-times" ></i></a></li>
-                      <li class="mob-logo"><a href="{{ route('index') }}"><img src="{{ asset('frontend/img/logo.png') }}" alt=""></a></li>
-                      <li class="out-link"><a class="" href="{{ route('index') }}">Home</a></li>
-                      <li>
-                          <div class="link">All Forex VPS Review<i class="fa fa-chevron-down"></i></div>
-                          <ul class="submenu font-sky">
-                            @foreach($review_submenus as $review_submenu)
-                            <li><a href="{{ route('review', $review_submenu->slug) }}">{{ $review_submenu->title }}</a></li>
-                            @endforeach
-                          </ul>
-                      </li>
-                      <li>
-                          <div class="link ">Best VPS List<i class="fa fa-chevron-down"></i></div>
-                          <ul class="submenu">
-                            @foreach($article_submenus as $article_submenu)
-                            <li><a href="{{ route('article', $article_submenu->slug) }}">{{ $article_submenu->title }}</a></li>
-                            @endforeach
-                          </ul>
-                      </li>
-                      <li class="out-link"><a class="" href="{{ route('comparison') }}">VPS Hosting Comparison</a></li>
-                  </ul>
-                  <!--Mobile Menu end-->
-              </div>
-            </div><!--Mobile menu end-->
             
           <div class="order-1 order-sm-2  col-12 col-sm-4 col-md-4 col-lg-2 col-xl-2">
             <div class="blrub-logo">
@@ -100,57 +82,9 @@
             </div>
           </div>
 
-        <!-- =========================
-           Search Box  Show on large device
-        ============================== -->
-        <div class="col-12 order-lg-2 col-md-5 col-lg-6 col-xl-5 d-none d-lg-block">
-            <div class="input-group wd-btn-group header-search-option">
-                <input type="text" class="form-control blurb-search" placeholder="Search ..." aria-label="Search for...">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary wd-btn-search" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                </span>
-            </div>
-        </div>
-
         </div><!--Row End-->
       </div><!--Container End-->
     </section><!--Section End-->
-
-    <!-- =========================
-        Main Menu Section
-    ============================== -->
-    <section id="main-menu" class="sticker-nav">
-      <div class="container">
-        <div class="row">
-          <div class="col-2 col-md-6 col-lg-12 ">
-            <div class="menu-container wd-megamenu">
-              <div class="menu">
-                  <ul class="wd-megamenu-ul">
-                      <li><a href="{{ route('index') }}" class="main-menu-list">Home</a></li>
-                      <li><a href="#" class="main-menu-list">All Forex VPS Review<i class="fa fa-angle-down angle-down" aria-hidden="true"></i></a>
-                          <ul class="single-dropdown">
-                            @foreach($review_submenus as $review_submenu)
-                              <li><a href="{{ route('review', $review_submenu->slug) }}">{{ $review_submenu->title }}</a></li>
-                            @endforeach
-                          </ul>
-                      </li>
-                      <li><a href="#" class="main-menu-list">Best VPS List<i class="fa fa-angle-down angle-down" aria-hidden="true"></i></a>
-                          <ul class="single-dropdown">
-                            @foreach($article_submenus as $article_submenu)
-                              <li><a href="{{ route('article', $article_submenu->slug) }}">{{ $article_submenu->title }}</a></li>
-                            @endforeach
-                          </ul>
-                      </li>
-                      <li><a href="{{ route('comparison') }}" class="main-menu-list">VPS Hosting Comparison</a></li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     <!-- =========================
@@ -172,13 +106,12 @@
             <div class="row">
               <div class="col-sm-3 p0 text-center">
                 <div class="details-img">
-                  <img class="img-fluid main-hover-icon-compare" src="{{ asset('frontend/img/details-img/compare-icon.png') }}" alt="compare-icon">
-                  <img class="img-fluid hover-icon-compare" src="{{ asset('frontend/img/details-img/compare.png') }}" alt="compare-icon">
+                  <span class="details-icon"><i class="fa fa-rocket"></i></span>
                 </div>
               </div>
               <div class="col-sm-9 p0 details-description">
-                <h6 class="details-title">Lets Compare</h6>
-                <p>Choose your product with price comparisons make your best deal today</p>
+                <h6 class="details-title">UPTIME</h6>
+                <p>Make sure your preferred provider is delivering you guaranteed server uptime. It’s one of the most important factors in Forex Trading for a successful trading career.</p>
               </div>
             </div>
           <div class="arow">
@@ -189,13 +122,12 @@
             <div class="row">
               <div class="col-sm-3 p0 text-center">
                 <div class="details-img">
-                  <img class="img-fluid main-hover-icon-user" src="{{ asset('frontend/img/details-img/review-icon.png') }}" alt="review-icon">
-                  <img class="img-fluid hover-icon-user" src="{{ asset('frontend/img/details-img/user-2.png') }}" alt="review-icon">
+                  <span class="details-icon"><i class="fa fa-map-marker"></i></span>
                 </div>
               </div>
               <div class="col-sm-9 p0 details-description">
-                <h6 class="details-title">Take Review</h6>
-                <p>Take your selected product review choose best one</p>
+                <h6 class="details-title">LATENCY</h6>
+                <p>The closer you are by your broker server, the better it will be for a great trading execution. Before choosing any provider, look closely at how much latency it’s going to be from your broker server.</p>
               </div>
             </div>
           <div class="arow">
@@ -206,13 +138,12 @@
             <div class="row">
               <div class="col-sm-3 p0 text-center">
                 <div class="details-img">
-                  <img class="img-fluid main-hover-icon-vendor" src="{{ asset('frontend/img/details-img/shop.png') }}" alt="vendor-icon">
-                  <img class="img-fluid hover-icon-vendor" src="{{ asset('frontend/img/details-img/vendor-icon.png') }}" alt="vendor-icon">
+                  <span class="details-icon"><i class="fa fa-phone-square"></i></span>
                 </div>
               </div>
               <div class="col-sm-9 p0 details-description">
-                <h6 class="details-title">Choose Multi-Vendor Store</h6>
-                <p>Lets check your product from multivendor store get satisfy.</p>
+                <h6 class="details-title">SUPPORT</h6>
+                <p>This department should be taken seriously before taking any action. An experienced & educated technical support team can mean a lot to you when your server faces any technical issue.</p>
               </div>
             </div>
           <div class="arow">
@@ -230,121 +161,6 @@
     </section>
 
     <!-- =========================
-        Subscribe Section
-    ============================== -->
-    {{-- <section id="subscribe">
-      <div class="container">
-        <!-- <div class="col-md-1"></div> -->
-            <div class="row subscribe-body">
-                <div class="col-12 col-md-12 col-lg-5">
-                    <h4 class="subscribe-title">Sign up for the latest updates</h4>
-                </div>
-                <div class="col-12 col-md-9 col-lg-5">
-                    <div class="input-group">
-                      <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 col-lg-2">
-                    <button type="button" class="btn btn-primary wd-shop-btn subscribe-btn">
-                        Subscribe
-                    </button>
-                </div>
-            </div>
-      </div>
-    </section> --}}
-
-    <!-- =========================
-        Footer Section
-    ============================== -->
-    {{-- <footer class="footer wow fadeInUp animated" data-wow-delay="900ms">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <!-- ===========================
-                Footer About
-               =========================== -->
-            <div class="footer-about">
-              <a href="#" class="footer-about-logo">
-                <img src="{{ asset('frontend/img/logo.png') }}" alt="Logo">
-              </a>
-              <div class="footer-description">
-                <p>Lorem ipsum dolor sit amet, anim id est laborum. Sed ut perspconsectetur, adipisci vam aliquam qua.</p>
-              </div>
-              <div class="wb-social-media">
-                <a href="#" class="bh"><i class="fa fa-behance"></i></a>
-            <a href="#" class="fb"><i class="fa fa-facebook-official"></i></a>
-            <a href="#" class="db"><i class="fa fa-dribbble"></i></a>
-            <a href="#" class="gp"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="vn"><i class="fa fa-vine"></i></a>
-            <a href="#" class="yt"><i class="fa fa-youtube-play"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 footer-view-controller">
-            <!-- ===========================
-                Festival Deals
-               =========================== -->
-            <div class="footer-nav">
-              <h6 class="footer-subtitle active-color">Footer Menu</h6>
-              <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="compare-products.html">Comparison Product </a></li>
-                <li><a href="shop-left-sidebar.html">Shop </a></li>
-                <li><a href="review-left-sidebar.html">Reviews</a></li>
-                <li><a href="blog-four-grid-left-sidebar.html">Blog</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 footer-view-controller">
-            ===========================
-                Top Stores
-               ===========================
-            <div class="footer-nav">
-              <div class="stores-list">
-                <h6 class="footer-subtitle">Top Stores</h6>
-                <ul>
-                  <li><a href="shop-left-sidebar.html">Affiliate Market 1</a></li>
-                  <li><a href="shop-left-sidebar.html">Affiliate Market 2</a></li>
-                  <li><a href="shop-left-sidebar.html">Affiliate Market 3</a></li>
-                  <li><a href="shop-left-sidebar.html">Affiliate Market 4</a></li>
-                  <li><a href="shop-left-sidebar.html">Affiliate Market 5</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 footer-view-controller">
-            <!-- ===========================
-                Need Help ?
-               =========================== -->
-            <div class="footer-nav">
-              <h6 class="footer-subtitle">Need Help ?</h6>
-              <ul>
-                <li><a href="#">Getting Started</a></li>
-                <li><a href="contact-us.html">Contact us</a></li>
-                <li><a href="#">FAQ's</a></li>
-                <li><a href="#">Press</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 footer-view-controller">
-            <!-- ===========================
-                About
-               =========================== -->
-            <div class="footer-nav">
-              <h6 class="footer-subtitle">About</h6>
-              <ul>
-                <li><a href="conditions.html">Privacy</a></li>
-                <li><a href="conditions.html">Return Policy</a></li>
-                <li><a href="conditions.html">Order &#38; Return</a></li>
-                <li><a href="conditions.html">Terms &#38; Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer> --}}
-
-    <!-- =========================
         CopyRight
     ============================== -->
     <section class="copyright wow fadeInUp animated" data-wow-delay="1500ms">
@@ -354,9 +170,9 @@
             <div class="copyright-text">
               <p class="text-uppercase"> 
                 @if(isset($setting))
-                  COPYRIGHT &copy; {!! $setting->footer_text !!}
+                  &copy; {!! $setting->footer_text !!} -
                 @endif
-              </p><a class="created-by" target="_blank" href="https://hitechparks.com/">Hi-Tech Parks</a>
+              </p><a class="created-by" target="_blank" href="https://bestforexvps.org/">Best Forex VPS</a>
             </div>
           </div>
         </div>

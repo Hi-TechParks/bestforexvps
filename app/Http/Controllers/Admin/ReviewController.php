@@ -86,8 +86,9 @@ class ReviewController extends Controller
                 File::makeDirectory($path, 0777, true, true);
             }
 
-            // Move File inside public/uploads/ folder
-            $file = $request->file('logo_path')->move($path, $logoNameToStore);
+            //Resize And Crop as Fit image here (400 width, 300 height)
+            $thumbnailpath = $path.$logoNameToStore;
+            $img = Image::make($request->file('logo_path')->getRealPath())->fit(400, 300, function ($constraint) { $constraint->upsize(); })->save($thumbnailpath);
         }
         else{
             $logoNameToStore = NULL;
@@ -108,8 +109,9 @@ class ReviewController extends Controller
                 File::makeDirectory($path, 0777, true, true);
             }
 
-            // Move File inside public/uploads/ folder
-            $file = $request->file('thumb_path')->move($path, $thumbNameToStore);
+            //Resize And Crop as Fit image here (300 width, 300 height)
+            $thumbnailpath = $path.$thumbNameToStore;
+            $img = Image::make($request->file('thumb_path')->getRealPath())->fit(300, 300, function ($constraint) { $constraint->upsize(); })->save($thumbnailpath);
         }
         else{
             $thumbNameToStore = NULL;
@@ -260,8 +262,9 @@ class ReviewController extends Controller
                 File::makeDirectory($path, 0777, true, true);
             }
 
-            // Move File inside public/uploads/ folder
-            $file = $request->file('logo_path')->move($path, $logoNameToStore);
+            //Resize And Crop as Fit image here (400 width, 300 height)
+            $thumbnailpath = $path.$logoNameToStore;
+            $img = Image::make($request->file('logo_path')->getRealPath())->resize(400, null, function ($constraint) { $constraint->upsize(); })->save($thumbnailpath);
         }
         else{
 
@@ -295,8 +298,9 @@ class ReviewController extends Controller
                 File::makeDirectory($path, 0777, true, true);
             }
 
-            // Move File inside public/uploads/ folder
-            $file = $request->file('thumb_path')->move($path, $thumbNameToStore);
+            //Resize And Crop as Fit image here (300 width, 300 height)
+            $thumbnailpath = $path.$thumbNameToStore;
+            $img = Image::make($request->file('thumb_path')->getRealPath())->resize(300, null, function ($constraint) { $constraint->upsize(); })->save($thumbnailpath);
         }
         else{
 

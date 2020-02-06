@@ -20,7 +20,7 @@
 
     <div class="form-group">
         <label for="short_desc">Short Desc</label>
-        <textarea class="form-control" name="short_desc" id="short_desc" rows="4">{{ isset($data->short_desc)?$data->short_desc:'' }}</textarea>
+        <textarea class="form-control summernote" name="short_desc" id="short_desc" rows="4">{{ isset($data->short_desc)?$data->short_desc:'' }}</textarea>
 
         <div class="invalid-feedback">
           Please Provide Short Desc.
