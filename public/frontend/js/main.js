@@ -1073,7 +1073,7 @@
             }
         });
 
-        $('.reviews-load-more-full_grid').slice(0, 8).addClass('display');
+        $('.reviews-load-more-full_grid').slice(0, 20).addClass('display');
         $('#loadMore_full_grid').on('click', function (e) {
             e.preventDefault();
             $('.reviews-load-more-full_grid:hidden').slice(0, 3).addClass('display');
