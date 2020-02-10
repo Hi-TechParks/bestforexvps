@@ -18,7 +18,7 @@
 
     <!-- Meta Tags -->
     <link rel="canonical" href="https://bestforexvps.org/"/>
-    <meta property="og:type" content="" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
     <meta property="og:image" content="" />
