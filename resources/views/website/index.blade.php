@@ -31,6 +31,13 @@
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-12 product-grid">
                     <div class="row">
+                        <div class="col-12 text-center">
+                            <h2>10 Best Forex VPS Providers in 2020</h2>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="row">
 
                         @foreach($reviews as $key => $review)
                         <div class="col-12 col-sm-12 col-lg-12 reviews-load-more-full_grid">

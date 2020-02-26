@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @foreach( $settings as $setting )
     <!-- App Title -->
-    <title>@yield('title') | {{ $setting->title }}</title>
+    <title>{{ $setting->title }}</title>
 
     <!-- App favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/uploads/setting/'.$setting->favicon_path) }}">
@@ -17,20 +17,10 @@
     @endforeach
 
     <!-- Meta Tags -->
-    <link rel="canonical" href="https://bestforexvps.org/"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:site" content="@sproutsocial" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:creator" content="@sproutsocial" />
+    <link rel="canonical" href="https://www.bestforexvps.org/"/>
     <!-- Meta Tags -->
+    
+    <meta name="google-site-verification" content="ZEhZ4_Gbhiwhxrq5rnAdHtveg2tSuq2A58HfB-2tUBA" />
 
     @if(empty($setting))
     <!-- App Title -->
