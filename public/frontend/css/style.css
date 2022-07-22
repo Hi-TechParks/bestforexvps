@@ -4177,6 +4177,17 @@ a.yt{background: #ff0000}
   margin-bottom: 30px;
 }
 
+.product-tab-content img {
+  width: 100% !important;
+  height: auto;
+  overflow: hidden;
+}
+
+.product-tab-content,
+.product-tab-content p {
+  text-align: justify;
+}
+
 .tab-video-area {
   padding-top: 30px;
 }

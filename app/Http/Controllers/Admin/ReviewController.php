@@ -148,8 +148,8 @@ class ReviewController extends Controller
                 // @see http://image.intervention.io/api/
                 $image = Image::make($src)
                   // resize if required
-                  //->resize(500, null) 
-                  ->resize(500, null, function ($constraint) {
+                  //->resize(1200, null) 
+                  ->resize(1200, null, function ($constraint) {
                         $constraint->aspectRatio();
                         $constraint->upsize();
                     })
@@ -341,8 +341,8 @@ class ReviewController extends Controller
                 // @see http://image.intervention.io/api/
                 $image = Image::make($src)
                   // resize if required
-                  //->resize(500, null) 
-                  ->resize(500, null, function ($constraint) {
+                  //->resize(1200, null) 
+                  ->resize(1200, null, function ($constraint) {
                         $constraint->aspectRatio();
                         $constraint->upsize();
                     })
